@@ -5,10 +5,8 @@ public class Quiz11 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        //int a = in.nextInt();
-        //int b = in.nextInt();
-        int a = 23;
-        int b = 8;
+        int a = in.nextInt();
+        int b = in.nextInt();
         int e = 0;
         for (int i = 1; i <= 62; i++) {
             if (i <= a) {
@@ -23,7 +21,7 @@ public class Quiz11 {
     }
 
     // return a value that's 2 raised to the power of x
-    static long power_of_2(int x) {
+    private static long power_of_2(int x) {
         long r = 1;
         for (int i = 0; i < x; ++i) {
             r = r * 2;
@@ -32,7 +30,7 @@ public class Quiz11 {
     }
 
     // return first digit of input
-    static int first_digit(long x) {
+    private static int first_digit(long x) {
         while ( x > 10) {
             x = x / 10;
         }

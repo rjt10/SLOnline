@@ -6,6 +6,7 @@ import java.util.Scanner;
  */
 public class Quiz14 {
 
+    // hewwo i am bubby
     static class DistanceSpeed {
         public DistanceSpeed(int d, int s) {
             distance = d;

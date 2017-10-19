@@ -20,7 +20,27 @@ public class Quiz32d {
             }
             milkProduction.put(cow, milkProduction.get(cow) + production);
         }
-
+        // find the minimum
+        int min = Integer.MAX_VALUE;
+        for (String cow : milkProduction.keySet()) {
+            if (milkProduction.get(cow) < min) {
+                min = milkProduction.get(cow);
+            }
+        }
+        // find the 2nd to minumum
+        int min2 = Integer.MAX_VALUE;
+        for (String cow : milkProduction.keySet()) {
+            if (milkProduction.get(cow) > min && milkProduction.get(cow) < min2) {
+                min2 = milkProduction.get(cow);
+            }
+        }
+        // print the cow names whose production is min2
+        for (String cow : milkProduction.keySet()) {
+            if (milkProduction.get(cow) == min2) {
+                System.out.println(cow);
+            }
+        }
+        /*
         // put the cow and its milk production into their respective arrays
         int numCows = milkProduction.keySet().size();
         String[] cowNames = new String[numCows];
@@ -56,5 +76,9 @@ public class Quiz32d {
         }
 
         System.out.println(cowNames[1]);
+        for (String cow: milkProduction.keySet()) {
+            System.out.println(cow + " " + milkProduction.get(cow));
+        }
+        */
     }
 }
